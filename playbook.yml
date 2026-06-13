@@ -3,7 +3,7 @@
   hosts: webservers
   remote_user: runner
   become: true
-  become_method: sudo
+  become_method: ansible.builtin.sudo
 
   vars:
     nginx_sites:
@@ -12,4 +12,4 @@
     - "mehmat.ru"
 
   roles:
-  - nginx-vhosts
+  - 'nginx-vhosts'

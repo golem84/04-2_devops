@@ -32,7 +32,7 @@
   loop: '{{ nginx_sites }}'
 
 - name: Copy index from template
-  ansible.builtin.template: 
+  ansible.builtin.template:
     src: 'index.html.j2'
     dest: '/var/www/{{ item }}/index.html'
     owner: root
@@ -41,8 +41,8 @@
   loop: '{{ nginx_sites }}'
   notify: Restart Nginx
 
-# instead of Notify nginx
-#- name: Force ngnix restart
-#  ansible.builtin.service:
-#    name: nginx
-#    state: restarted
+#  instead of Notify nginx
+# - name: Force ngnix restart
+#   ansible.builtin.service:
+#     name: nginx
+#     state: restarted
