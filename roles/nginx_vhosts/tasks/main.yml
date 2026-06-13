@@ -5,13 +5,13 @@
     state: latest
     update_cache: true
 
-- name: Get Nginx version
-  ansible.builtin.shell: nginx -v 2>&1 | jq -R 'split(" ")' | jq -r '.[2]'
-  register: nginx_version
+# - name: Get Nginx version
+#   ansible.builtin.shell: nginx -v 2>&1 | jq -R 'split(" ")' | jq -r '.[2]'
+#   register: nginx_version
 
-- name: Print Nginx version
-  ansible.builtin.debug:
-    msg: "Nginx version: {{ nginx_version.stdout }}"
+# - name: Print Nginx version
+#   ansible.builtin.debug:
+#     msg: "Nginx version: {{ nginx_version.stdout }}"
 
 - name: Copy nginx.conf from template
   ansible.builtin.template:
