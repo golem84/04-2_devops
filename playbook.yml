@@ -7,10 +7,10 @@
 
   vars:
     nginx_sites:
-    - etis.com
-    - fizfak.ru
-    - mehmat.ru
+      - etis.com
+      - fizfak.ru
+      - mehmat.ru
 
   roles:
-  - nginx_vhosts
+    - nginx_vhosts
 
